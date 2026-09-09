@@ -1,13 +1,14 @@
 {/*rfce*/}
-import React from 'react'
-
+//import React from 'react'
+import { useNavigate } from 'react-router-dom'
 function Navbar() {
+  let navigate=useNavigate()
   return (
     <header>
         <h1>Doctor app</h1>
     <div>
-        <button>Home</button>
-        <button>Add Doctor</button>
+        <button onClick={()=>navigate('/')}>Home</button>
+        <button onClick={()=>navigate('/addnewdoctor')}>Add Doctor</button>
     </div>
     </header>
     
